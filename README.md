@@ -36,7 +36,13 @@ When you run the terminal browser, you can hit `:` and enter `help` command. It 
 
 # Screenshots
 
-Coming soon
+![Initial view](screenshots/screenshot1.png "Initial view")
+
+![View mode](screenshots/screenshot2.png "View mode")
+
+![Help mode](screenshots/screenshot3.png "Help mode")
+
+![Command mode](screenshots/screenshot4.png "Command mode")
 
 # TODO
 
