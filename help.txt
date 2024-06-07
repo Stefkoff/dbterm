@@ -1,0 +1,24 @@
+This is very basic MySQL terminal browser, using NCURSES library for TUI.
+The browser is divided in two sections: left and right
+Left section is showing the tables, and the right section is showing the data.
+Each section has an arrow keys control + (page up|down, home and end buttons) to navigate between the items
+By pressing ":" you will enter in "command" mode, which you can execute certain commands over the active panel (see below)
+or bringing new panels (see below)
+Below is explanation of each panel and their shortcuts or commands:
+1. Left panel - activate by command "left" or F1. It can navigate throw all tables in the given database
+2. Right pane - activate by command "right" or F2. It can navigate between all the data from the selected database from Left Panel. You can use left and right arrows to view all the columns. Only certain amount of columns is presented, depending on the terminal size
+    2.1 command "perpage {page}" will change the default page size (100) to the give {page} from the command
+    2.2 command "next" will go to the next page, depending on the page size
+    2.3 command "prev" will go to the previous page, depending on the page size
+    2.4 command "first" will go to the first page
+    2.5 command "last" will go to the last page
+    2.6 command "where {condition}" will execute a WHERE condition of the data for the active table. Keep in my for the syntax. There are no yet limitations or syntax checks for this command
+    2.7 command "view" (or F3 key) will open a new panel will all the row information listed one by one for better view. This panel can be navigated by arrow keys (up|down|left|right). You can exit from view mode by pressing F3 of ESC key
+3. Command mode - Command mode will execute a predefined commands. The command mode first checks for available commands on the active panel and then execute the additional. Below is a list of commands that are not mentioned
+    3.1 command "exit" will exit from the application
+    3.2 command "help" will show this help
+    3.3 command "databases" will show the databases modal. See point 4.
+    3.5 command "db {dbname}" will switch the database to the given {dbname} if exists
+4. Database selection modal - when entering command "databases" a modal will be shown, and you will be available to switch the database.
+by navigating to the desired database, you can press F5 key and the database will be switched. All the panels will be re-initialized with the new data.
+The modal can be navigated by up and down arrows. You can exit from database selection model by pressing ESC key
